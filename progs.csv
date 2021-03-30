@@ -91,3 +91,5 @@ A,lazygit,"Awesome Git manager"
 ,calibre,'ebook manager'
 ,wine,'Windows execution layer'
 ,winetricks,'Helper util to install wine packages'
+,pass,'Password manager'
+,pass-otp,'Password OTP manager'
