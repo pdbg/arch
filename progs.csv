@@ -93,3 +93,6 @@ A,lazygit,"Awesome Git manager"
 ,winetricks,'Helper util to install wine packages'
 ,pass,'Password manager'
 ,pass-otp,'Password OTP manager'
+,pandoc,'Document conversion tool'
+,wkhtmltopdf,'HTML to PDF conversion tool used by pandoc'
+,texlive-core,'Tex utilities'
