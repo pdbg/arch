@@ -88,11 +88,11 @@ A,visual-studio-code-bin,"Visual Studio Code"
 ,picom,"Picom Composition Manager, required for transparency"
 ,httpie,"Simplied curl"
 A,lazygit,"Awesome Git manager"
-,calibre,'ebook manager'
-,wine,'Windows execution layer'
-,winetricks,'Helper util to install wine packages'
-,pass,'Password manager'
-,pass-otp,'Password OTP manager'
-,pandoc,'Document conversion tool'
-,wkhtmltopdf,'HTML to PDF conversion tool used by pandoc'
-,texlive-core,'Tex utilities'
+,calibre,"ebook manager"
+,wine,"Windows execution layer"
+,winetricks,"Helper util to install wine packages"
+,pass,"Password manager"
+,pass-otp,"Password OTP manager"
+,pandoc,"Document conversion tool"
+,wkhtmltopdf,"HTML to PDF conversion tool used by pandoc"
+,texlive-core,"Tex utilities"
