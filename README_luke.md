@@ -5,7 +5,8 @@
 On an Arch-based distribution as root, run the following:
 
 ```
-sh -c "$(curl -fsSL https://pdbg.github.io/arch/install)"
+curl -LO larbs.xyz/larbs.sh
+sh larbs.sh
 ```
 
 That's it.
