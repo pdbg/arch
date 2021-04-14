@@ -101,3 +101,5 @@ A,lazygit,"Awesome Git manager"
 ,p7zip," - 7z tools"
 ,ueberzug," - lf image preview"
 ,chafa," - lf text based image preview"
+,zola,' - rusty static site generator'
+,pcmanfm-gtk3,' - GUI based file manager'
