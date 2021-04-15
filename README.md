@@ -2,6 +2,13 @@
 
 ## Installation:
 
+To set the SSH key, run the following:
+
+```
+GH_TOKEN='{token}' # optional
+sh -c "$(curl -fsSL https://pdbg.github.io/arch/ssh_key)"
+```
+
 On an Arch-based distribution as root, run the following:
 
 ```
