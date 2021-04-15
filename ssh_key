@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Usage: ssh_key without GH_TOKEN creates ssh key and shows public key
+#        ssh_key with GH_TOKEN creates ssh key and sets directly into Github
+# Refer: https://unix.stackexchange.com/a/136898
+
+# Main entry point
+main() {
+  if [[ -e ~/.ssh ]] && [[ -d ~/.ssh ]]; then
+    echo ''
+  else
+    rm -rf ~/.ssh
+    ssh-keygen -t rsa -b 4096 -P '' -f ~/.ssh/id_rsa
+    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  fi
+
+  if ! ssh -T git@github.com; then
+    echo 'Add the public key to your git'
+    [[ -z $GH_TOKEN ]] && cat ~/.ssh/id_rsa.pub || add_ssh_gh
+    exit 1
+  fi
+}
+
+# function to configure SSH key in GitHub thru API
+add_ssh_gh() {
+  set +e
+  curl --fail -H "Authorization: token $GH_TOKEN" https://api.github.com/user >/dev/null 2>&1
+  [[ $? -gt 0 ]] && echo 'Invalid TOKEN!' && exit 1
+  set -e
+  echo 'GitHub API works!'
+  title="$(cat /etc/hostname)_ssh"
+  ssh_pub_key=$(cat ~/.ssh/id_rsa.pub)
+  set +e
+  curl -H "Authorization: token $GH_TOKEN" --data "{\"title\":\"$title\",\"key\":\"$ssh_pub_key\"}" https://api.github.com/user/keys
+  [[ $? -gt 0 ]] && echo 'Provide Public Key write key access' && exit 1
+  set -e
+  echo 'Successfully added the key to GitHub'
+}
+
+
+main
+
