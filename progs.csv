@@ -5,6 +5,7 @@
 ,xorg-xrandr,"xrandr utility to control resolutions."
 ,ttf-linux-libertine,"provides the sans and serif fonts for LARBS."
 A,lf-git,"is an extensive terminal file manager that everyone likes."
+,git-lfs,"is a git extension for LFS support."
 ,bc,"is used for a dropdown calculator."
 ,xcompmgr,"is for transparency and removing screen-tearing."
 ,xorg-xprop,"is a tool for detecting window properties."
